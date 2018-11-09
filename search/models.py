@@ -11,4 +11,4 @@ class Pricedata(models.Model):
     imageurl = models.URLField(db_column='imageURL', blank=True, null=True)  # Field name made lowercase. This field type is a guess.
     class Meta:
         db_table = 'PriceData'
-    
+        ordering = ['price']

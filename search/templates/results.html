@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load static %}
+    {% block head %}
+    <title>Results</title>
+    {% endblock %}
+    {% block body %}
+    <nav class="navbar navbar-light bg-light" style='margin-left: -10px; margin-right: -10px; padding-bottom: 40px;'>
+        <center></center>
+        <center>
+        <img src ="{% static 'images/logo.png' %}" width=200px class=py-5>
+      <form>
+          <input class="form-control form-control-lg" id="main-search" type="text" value="{{Search.Query}}">
+          <button type="button" class="btn btn-info btn-lg" id="main-search-btn"><i class="fas fa-search"></i></button>
+      </form>
+            </center>
+         <center><p><i class="fas fa-shopping-cart" style="color=#000"></i></p></center>   
+    </nav>
+	  <section class ='page-main'>
+          <div class ='row'>
+              
+                <div class = 'col-6 col-md-4 col-xl-3'>
+                  <div class="card work-display-card">
+                      <img class="card-img-top" src="{% static 'images/slide.png' %}" alt="{{proj.title | capfirst}}">
+
+                      
+                      <div class="card-body">
+                        <div class = 'row'>
+                            <div class = 'col-8'>
+                                <h5 class="card-title">Pepperoni Pizza</h5>
+                                  
+                            </div>
+                            <div class = 'col-4'>
+                                
+                                <p class="text-muted" style="text-align: right;">19 AED</p>
+                                
+                            </div>
+                            <div class = 'col-12'>
+                                <center>
+                                <a href="#" class="view-btn">Order Now <i class="fas fa-shopping-cart"></i></a>
+                                </center>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+    {% endblock %}
+</html>
