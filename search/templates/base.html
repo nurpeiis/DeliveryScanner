@@ -1,0 +1,39 @@
+{% load static from staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    {% load static %}
+  	<link rel="stylesheet" href="{% static 'style.css' %}">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="Community, Engagement, University, Student, New York University Abu Dhabi, ">
+    <meta name="description" content="Connect the community of New York University Abu Dhabi with External Partners through effective matching of interception points">
+    <meta name="author" content="Nurpeiis Baimukan, Waleed Hashmi, Aizaz Ansari, Odmaa Bayaraa, Nurgaze Seidaliev">
+    <meta http-equiv="refresh" content="100">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  
+      {% block head %}
+      <title>RED|Base</title>
+      {% endblock %}
+  </head>
+  {% block body %}
+  <h1>Base</h1>  
+  {% endblock %}
+  {% block footer %}
+  <footer class="container py-4">
+    <div class="row">
+      <div class="col-12 col-md">
+        <small class="text-muted">© 2018 Delivery Scanner</small>
+        </div>
+    </div>
+  </footer>
+  {% endblock %}
+  </html>

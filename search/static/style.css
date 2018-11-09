@@ -1,0 +1,302 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+	background-color: #fff;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300,400,700;
+}
+
+section {
+	display: block;
+}
+
+
+
+#main {
+	width: 100%;
+	display: table;
+	margin: 0;
+	max-width: none;
+	background-color: #373B44;
+	background-image: url(images/bg.png);
+	background-size: cover;
+	background-position: center;
+	height: 90vh;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#main h1 {
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+#main-search{
+    display: table-cell;
+    vertical-align:middle;
+    width: 300px;
+    opacity: 1;    
+    transition: all 600ms ease;
+}
+
+
+
+#main-search-btn{
+    display: table-cell;
+    vertical-align:middle;
+    margin-left: -10px;
+    z-index: -100px;
+
+}
+
+.a-edit{
+    color: #cae;
+    transition: all 600ms ease;
+}
+
+.a-edit:hover{
+    color: #fff;
+    transition: all 600ms ease;
+    text-decoration: none;
+}
+
+
+nav {
+	margin: 0 20px;
+}
+
+.nav-black {
+    background: #000;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0.85;
+    transition: all 600ms ease;
+}
+
+.nav-black:hover{
+    opacity:1;
+    transition: all 600ms ease;
+}
+
+
+@media screen and (max-width: 768px){
+    .hireme{
+            margin-top: 10px;
+            margin-bottom: 10px;
+    }
+}
+@media screen and (min-width: 768px) {
+	nav {
+		margin: 0 50px;
+	}
+}
+
+.logo-text{
+	font-weight: 300;
+}
+
+.main-content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+
+.work-card{
+/*	display: block; */
+	text-align: center;
+	padding: 10px;
+	transition: all 600ms ease;
+	margin-bottom: 50px;
+
+
+}
+
+.work-card:hover{
+	background-color: #f3f3f3;
+	border-radius: 20px;
+	transition: all 600ms ease;
+	
+}
+
+.work-card:hover .work-icon{
+    opacity: 0.8;
+	transition: all 600ms ease;
+	
+}
+
+.work-icon{
+	font-size: 3em;
+	padding-bottom: 20px;
+    transition: all 600ms ease;
+}
+
+
+
+
+.work-card-title{
+	font-weight: 300;
+	font-size: 1.3em;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+}
+
+.work-card a, .card-hyperlink{
+	transition: all 600ms ease;
+}
+
+.work-card a:hover,  .card-hyperlink:hover{
+	text-decoration: none;
+	color: #1f1f1f;
+	transition: all 600ms ease;
+	letter-spacing: 1px;
+}
+
+
+.page-heading {
+	background-color: #e0e0e0;
+	color: #000;
+	height: 30vh;
+	padding: 65px;
+}
+
+.page-heading h1{
+	font-weight: 300;
+}
+
+
+.page-heading .breadcrumb {
+	background-color: #e0e0e0;
+	font-size: .8em;
+	padding:0px;
+}
+
+.breadcrumb a {
+	transition: all 600ms ease;	
+}
+
+.breadcrumb a:hover {
+	text-decoration: none;
+	color: #1f1f1f;
+	transition: all 600ms ease;
+}
+
+
+
+.useful-links{
+	transition: all 600ms ease;
+	font-size: .8em;
+
+}
+
+.useful-links:hover {
+	text-decoration: none;
+	color: #1f1f1f;
+	transition: all 600ms ease;
+	letter-spacing: 0.2px;
+}
+
+.page-main {
+	min-height: 60vh;
+	background-color: #f0f0f0;
+	color: #1f1f1f;
+/*	margin: 0 -15px;*/
+}
+
+.tag-sidebar{
+	padding: 50px;
+}
+
+.work-content {
+	padding: 65px;
+}
+
+@media screen and (min-width: 768px) {
+	.page-main{
+		padding: 65px;
+		
+	}
+	.tag-sidebar{
+		padding: 20px;
+	}
+	
+	.work-content{
+		padding:0px;
+		margin-top: 65px;
+	}
+}
+
+
+.work-display-card {
+    transition: all 600ms ease;
+    margin: 10px 0;
+}
+
+.work-display-card img {
+    position: relative; 
+    margin: 0 auto; 
+    text-align: center
+}
+
+.card-title {
+    margin-bottom: 0px;
+}
+
+.work-display-card:hover{
+    transform: translateY(-15px);
+    transition: all 600ms ease;
+}
+
+
+.view-btn {
+    position: relative;
+	transition: all 600ms ease;
+    color: #a44;
+}
+
+.view-btn:hover {
+	text-decoration: none;
+	color: #1f1f1f;
+	transition: all 600ms ease;
+	letter-spacing: .5px;
+}
+
+
+
+
+.work-display-card:hover .card-hover-text{
+    opacity: 1;
+    transition: all 600ms ease;
+}
+
+.work-display-card img {
+    transition: all 600ms ease;   
+}
+
+.work-display-card:hover img {
+    opacity: 0.8;
+    transition: all 600ms ease;   
+}
+
+/*Works section's subheading on the homepage*/
+.subheading{
+    text-align: center; 
+    font-weight: 300;
+}
+
+.card-header .btn-link {
+    text-decoration: none;
+    transition: all 600ms ease;
+}
+
+.card-header .btn-link:hover {
+    color: #1e1e1e;
+    transform: translateX(10px);
+}
