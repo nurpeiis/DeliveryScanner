@@ -8,19 +8,9 @@ from django.shortcuts import render_to_response
 class IndexView(TemplateView):
     template_name = 'index.html'
     def get(self, request):
-        query = request.GET.get("get")
-        qs = Pricedata.objects.all()
-        if query is not None:
-            qs = qs.filter( Q(dishname_icontains=search_query) | Q(restaurant_icontains=search_query) )
+        query = request.GET.get("q")
+        print(query)
+        qs = Pricedata.objects.all().filter( Q(dishname__icontains=query) | Q(restaurant__icontains=query) )
         return render(request, self.template_name, {'results': qs} )
-    """
-    def get_queryset(self):
-        query = self.request.GET.get('q')
-        if query:
-            return Pricedata.objects.filter(title__icontains=query)
-        else:
-            return Pricedata.objects.all()
-            """
-class ResultView(TemplateView):
-    template_name = 'search/results.html'
+
     
