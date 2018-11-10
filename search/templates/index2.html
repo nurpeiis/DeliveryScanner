@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% load static %}
+{% block title %}
+<title>Delivery Scanner</title>
+{% endblock %}
+{% block body %}
+<section>
+	<div id = 'main'>
+  <div class="main-content">
+      <img src ="{% static 'images/logo.png' %}" width=200px class=py-5>
+      <form method="GET" action="/search/" id="searchform">
+        <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
+    </form>
+      <h6 class="py-3"> <i class="fas fa-map-pin"></i> Location:  <a class="a-edit" href="">Saadiyat Island</a></h6>
+      
+      <button type="button" class="btn btn-info">View Deals</button>
+      <button type="button" class="btn btn-info">Surprise Me</button>
+      <div class="row">
+        <div class="span12">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        Dish Name
+                    </th>
+                    <th>
+                        Restaurant
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>Order in One click
+                    </th>
+                </thead>
+                <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.dishname }}
+                    </td>
+                    <td>{{ result.restaurant}}
+                    </td>
+                    <td>{{ result.price}}
+                    </td>
+                    <td><a href={{result.foodurl}}>{{ result.deliveryapp}}</a>
+                    </td>
+                    
+                </tr>
+                {% empty %}
+                <tr>No results found.</tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+      
+ </div>
+	</div>
+</section>
+{% endblock %}
+
+</html>

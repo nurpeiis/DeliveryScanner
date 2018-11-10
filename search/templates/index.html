@@ -5,58 +5,72 @@
 <title>Delivery Scanner</title>
 {% endblock %}
 {% block body %}
-<section>
-	<div id = 'main'>
-  <div class="main-content">
-      <img src ="{% static 'images/logo.png' %}" width=200px class=py-5>
-      <form method="GET" action="/search/" id="searchform">
-        <input class="searchfield" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
-    </form>
-      <h6 class="py-3"> <i class="fas fa-map-pin"></i> Location:  <a class="a-edit" href="">Saadiyat Island</a></h6>
-      
-      <button type="button" class="btn btn-info">View Deals</button>
-      <button type="button" class="btn btn-info">Surprise Me</button>
-      <div class="row">
-        <div class="span12">
-            <table class="table table-bordered">
-                <thead>
-                <tr>
-                    <th>
-                        Dish Name
-                    </th>
-                    <th>
-                        Restaurant
-                    </th>
-                    <th>
-                        Price
-                    </th>
-                    <th>Order in One click
-                    </th>
-                </thead>
-                <tbody>
-                {% for result in results %}
-                <tr>
-                    <td>{{ result.dishname }}
-                    </td>
-                    <td>{{ result.restaurant}}
-                    </td>
-                    <td>{{ result.price}}
-                    </td>
-                    <td><a href={{result.foodurl}}>{{ result.deliveryapp}}</a>
-                    </td>
+
+    <nav class="navbar navbar-light bg-light" style='margin-left: -10px; margin-right: -10px; padding-bottom: 40px;'>
+        <center></center>
+        <center>
+        <img src ="{% static 'images/logo.png' %}" width=200px class=py-5>
+           
+
+            
+    <form method="GET" action="/search/" id="searchform">
+          <input class="searchfield form-control form-control-lg" id="main-search" id="searchbox" name="q" type="text" value="{{ request.GET.q }}" placeholder="Search..."/>
+          <button type="button" class="btn btn-info btn-lg" id="main-search-btn"><i class="fas fa-search"></i></button>
+      </form>
+            
+            
+            <h6 class="py-3 loc"> <i class="fas fa-map-pin"></i> Location:  <a class="a-edit" href="">Saadiyat Island</a></h6>
+            
+            </center>
+    <center></center> 
+    </nav>
+	  <section class ='page-main'>
+          <div class ='row'>
+              {% for result in results %}
+              {% if result.price > 11 %}
+              {% if forloop.counter < 3000 %}
+
+              <div class = 'col-6 col-md-4 col-xl-3'>
+                  <div class="card work-display-card">
+                      {% if not result.imageurl %}
+                      <img class="card-img-top" src="{% static 'images/thumbnail.jpg' %}" >
+                      {% else %}
+                      <img class="card-img-top" src="{{ result.imageurl }}" >
+                      {% endif %}
+                      
+                      <div class="card-body">
+                        <div class = 'row'>
+                            <div class = 'col-8'>
+                                <h5 class="card-title">{{result.dishname }}</h5>
+                            </div>
+                            <div class = 'col-4'>
+                                
+                                <p class="text-muted" style="text-align: right;">AED {{ result.price}}</p>
+                            </div>
+                            <div class = 'col-12'>
+                                <center>
+                                <p>Restaurant: {{ result.restaurant}}</p>
+                                <a href="{{result.foodurl}}" class="view-btn">Order Now at {{ result.deliveryapp}}<i class="fas fa-shopping-cart"></i></a>
+                                    
+                                    
+                                </center>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
                     
-                </tr>
-                {% empty %}
-                <tr>No results found.</tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
-    </div>
+                </div>
+          
+              {% endif %}
+              {% endif %}
+              
+              {% empty %}
+                <h5>No results found.</h5>
+              {% endfor %}
+              
+              
+
+</div></section>
       
- </div>
-	</div>
-</section>
 {% endblock %}
 
-</html>
