@@ -30,9 +30,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% for result in page.object_list %}
+                {% for result in results %}
                 <tr>
-                    <td>{{ result.rendered|safe }}
+                    <td>{{ result.dishname }}
                     </td>
                 </tr>
                 {% empty %}
