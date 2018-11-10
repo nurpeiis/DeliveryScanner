@@ -10,4 +10,7 @@
 ## Description of technologies:
 1. Front end- bootstrap, photoshop
 2. Back end- Django (web framework), SQlite3(database) 
-2. Search tool: from django.db.models import Q library was used to filter relevant data by searching through the dish name and restaurant names
+3. Search tool: from django.db.models import Q library was used to filter relevant data by searching through the dish name and restaurant names
+## Database and admin page:
+1. Table Pricedata stores data scraped from websites
+2. localhost:8000/admin enables you to add or delete data from Pricedata
