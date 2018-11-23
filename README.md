@@ -1,6 +1,6 @@
 # DeliveryScanner
 ## Aim:
-Reduce time and cost of delivering food comparing various offers by food delivery companies near your location
+Reduce time and cost of delivering food by comparing various offers of food delivery services near your location
 
 ## Future Improvements:
 - Registering in our platform enables you to automatically register to all delivery services of your choice, so that checking out process will take even lower time
